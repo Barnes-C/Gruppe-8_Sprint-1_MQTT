@@ -69,11 +69,6 @@ class Consumer {
                     topics[i] = new Topic(stringsarr.get(i), QoS.EXACTLY_ONCE);
                 }
 
-                for (int i = 0; i < num; i++) {
-                    System.out.println(topics[i].toString());
-                }
-
-
                 connection.subscribe(topics, new Callback<byte[]>() {
                     public void onSuccess(byte[] qoses) {
                     }
