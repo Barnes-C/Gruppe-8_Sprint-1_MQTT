@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Export-Package: org.fusesource.mqtt.client;uses:="org.fusesource.hawtd
+ ispatch,org.fusesource.hawtdispatch.transport,javax.net.ssl,org.fuses
+ ource.hawtbuf,org.fusesource.mqtt.codec",org.fusesource.mqtt.cli;uses
+ :="org.fusesource.hawtdispatch,org.fusesource.mqtt.client,org.fusesou
+ rce.hawtbuf",org.fusesource.mqtt.codec;uses:="org.fusesource.mqtt.cli
+ ent,org.fusesource.hawtdispatch.util,org.fusesource.hawtdispatch.tran
+ sport,org.fusesource.hawtbuf"
+Implementation-Title: mqtt-client
+Implementation-Version: 1.16
+Tool: Bnd-0.0.160
+Bundle-Name: mqtt-client
+Created-By: 1.6.0_65 (Apple Inc.)
+Bundle-Vendor: FuseSource, Corp.
+Bundle-Version: 1.16
+Bnd-LastModified: 1568799716268
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-Description: mqtt-client provides an ASL 2.0 licensed API to MQ
+ TT. It takes care of 
+     automatically reconnecting to your MQTT se
+ rver and restoring your client 
+     session if any network failures 
+ occur. Applications can use a blocking 
+     API style, a futures bas
+ ed API, or a callback/continuations passing API 
+     style.
+Import-Package: javax.net.ssl,org.fusesource.hawtbuf;version=1.11,org.
+ fusesource.hawtdispatch,org.fusesource.hawtdispatch.transport;version
+ =1.22,org.fusesource.hawtdispatch.util;version=1.22,org.fusesource.mq
+ tt.cli,org.fusesource.mqtt.client,org.fusesource.mqtt.codec
+Bundle-SymbolicName: org.fusesource.mqtt-client.mqtt-client
+Bundle-DocURL: http://fusesource.com/
+

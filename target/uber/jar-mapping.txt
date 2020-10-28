@@ -1,0 +1,7 @@
+maven-1.4.jar=C:\Users\wagne\avg\activemq_Projekt\maven\target\maven-1.4.jar
+mqtt-client-1.16.jar=C:\Users\wagne\.m2\repository\org\fusesource\mqtt-client\mqtt-client\1.16\mqtt-client-1.16.jar
+hawtdispatch-transport-1.22.jar=C:\Users\wagne\.m2\repository\org\fusesource\hawtdispatch\hawtdispatch-transport\1.22\hawtdispatch-transport-1.22.jar
+hawtdispatch-1.22.jar=C:\Users\wagne\.m2\repository\org\fusesource\hawtdispatch\hawtdispatch\1.22\hawtdispatch-1.22.jar
+gson-2.8.6.jar=C:\Users\wagne\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar
+hawtbuf-1.11.jar=C:\Users\wagne\.m2\repository\org\fusesource\hawtbuf\hawtbuf\1.11\hawtbuf-1.11.jar
+javax.jms-api-2.0.1.jar=C:\Users\wagne\.m2\repository\javax\jms\javax.jms-api\2.0.1\javax.jms-api-2.0.1.jar
