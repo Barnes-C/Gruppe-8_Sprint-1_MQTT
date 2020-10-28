@@ -1,0 +1,1 @@
+start cmd /k java -cp .\target\maven-1.4.jar activemq.Producer
