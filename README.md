@@ -1,7 +1,7 @@
 # MQTT_AVG
 <h2>Requirements:</h2>
 
-*  Java Version 55 or newer<br />
+*  Java Version 11 or newer<br />
 *  ActiveMQ Broker<br />
   
 <h2>Before you start: </h2>
