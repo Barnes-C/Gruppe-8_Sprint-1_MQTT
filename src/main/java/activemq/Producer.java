@@ -71,7 +71,7 @@ class Producer {
 
                 if (msg.length != 0) {
                     connection.publish(topic, msg, QoS.EXACTLY_ONCE, true);
-                    System.out.println("Nachricht " + msg + " in topic: " + topic.toString() + " gesendet!");
+                    System.out.println("Message " + msg + " in topic: " + topic.toString() + " send!");
                 }
             }
             Thread.sleep(10000);
@@ -80,7 +80,7 @@ class Producer {
         //disconnect the connections
         connection.disconnect().await();
 
-        System.out.println("System beendet!");
+        System.out.println("Process finished!");
 
         System.exit(0);
     }
