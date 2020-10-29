@@ -117,7 +117,7 @@ class Producer {
     }
 
     //method to get the currency from the api
-    public String getCurrency(String name, String key) {
+    public List getCurrency(String name, String key) {
         try {
             //create the URL with the given stock name
             URL url = new URL("https://finnhub.io/api/v1/stock/profile2?symbol=" + name + "&token=" + key);
@@ -136,15 +136,22 @@ class Producer {
             Gson gson = new Gson();
             Properties data = gson.fromJson(result, Properties.class);
             String currency = data.getProperty("currency");
+            String companyName = data.getProperty("name");
+            String country = data.getProperty("country");
 
-            return currency;
+            List propertiesList = new ArrayList();
+            propertiesList.add(currency);
+            propertiesList.add(companyName);
+            propertiesList.add(country);
+
+            return propertiesList;
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return "";
+        return new ArrayList();
     }
 
     //method to build the String which will be send
@@ -154,8 +161,17 @@ class Producer {
         String key = key2;
         Producer producer = new Producer();
 
+        String currency = "";
+        String companyName = "";
+        String country = "";
+
         //get the currency for the stock
-        String currency = producer.getCurrency(name, key);
+        List properties = producer.getCurrency(name, key);
+        if (properties.size() == 3 && properties.get(0) != null && properties.get(1) != null && properties.get(2) != null) {
+            currency = properties.get(0).toString();
+            companyName = properties.get(1).toString();
+            country = properties.get(2).toString();
+        }
 
         //get the price for the stock
         String price = producer.getPrice(name, key);
@@ -164,8 +180,8 @@ class Producer {
         Date date = java.util.Calendar.getInstance().getTime();
 
         //build the string
-        if (currency != "" && price != "") {
-            message = date + "   " + name + " is worth " + price + currency;
+        if (currency != "" && price != "" && companyName != "" && country != "") {
+            message = date + "   " + companyName + " (" + name + ") " + "from " + country + " is worth " + price + "$ original currency is: " + currency;
         }
 
         return message;
